@@ -2,6 +2,8 @@ import java.sql.*;
 
 public class MysqlConnector {
 
+    public static Connection con = null;
+    public static MysqlConnector connector = new MysqlConnector();
     private final String user = "root";
     private final String password = "";
     private final String host = "localhost";
@@ -9,9 +11,6 @@ public class MysqlConnector {
     private final String databaseName = "log";
     private final String tableName = "data";
     private final String url = "jdbc:mysql://" + host + ":" + port + "/" + databaseName;
-
-    public static Connection con = null;
-    public static MysqlConnector connector = new MysqlConnector();
 
 
     private MysqlConnector() {
