@@ -1,3 +1,5 @@
+package org.mdurmus.kafka;
+
 import java.sql.*;
 
 public class MysqlConnector {

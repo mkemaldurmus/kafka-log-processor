@@ -1,4 +1,4 @@
-import java.util.Locale;
+package org.mdurmus.kafka;
 
 public class ServerLog {
     private String date;
@@ -67,7 +67,7 @@ public class ServerLog {
 
     @Override
     public String toString() {
-        return "ServerLog{" +
+        return "org.mdurmus.kafka.ServerLog{" +
                 "date='" + date + '\'' +
                 ", time='" + time + '\'' +
                 ", logLevel='" + logLevel + '\'' +

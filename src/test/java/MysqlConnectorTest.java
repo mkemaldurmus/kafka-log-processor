@@ -1,4 +1,6 @@
 import org.junit.Test;
+import org.mdurmus.kafka.MysqlConnector;
+import org.mdurmus.kafka.ServerLog;
 
 public class MysqlConnectorTest {
 

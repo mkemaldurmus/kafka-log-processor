@@ -1,3 +1,5 @@
+package org.mdurmus.kafka;
+
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -14,6 +16,7 @@ public class ProducerLog {
 
         String topicName = "topic-test";
 
+
         // Configure the Producer
         Properties configProperties = new Properties();
         configProperties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -21,7 +24,7 @@ public class ProducerLog {
         configProperties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
         Producer producer = new KafkaProducer<String, String>(configProperties);
-        FileInputStream fileInputStream = new FileInputStream("log.csv");
+        FileInputStream fileInputStream = new FileInputStream("/scripts/log.csv");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
 
         bufferedReader.lines().forEach(line -> {
